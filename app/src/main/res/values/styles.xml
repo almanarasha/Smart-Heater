@@ -1,0 +1,43 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/lightGrey</item>
+        <item name="colorPrimaryDark">@color/redColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/lightGrey</item>
+        <item name="titleTextColor">@color/redColor</item>
+        <item name="actionBarStyle">@style/SmartHeaterActionBarStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+      <item name="android:navigationBarColor">@color/redColor</item>
+    </style>
+
+    <style name="SmartHeaterActionBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- Remove the shadow below the app bar -->
+        <item name="elevation">0dp</item>
+
+    </style>
+
+    <style name="buttonStyle1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">30sp</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style >
+    <style name="buttonStyle2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">25sp</item>
+        <item name="android:padding">18dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style >
+<style name="editTextStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:textSize">24sp</item>
+    <item name="layout_constraintWidth_percent">0.7</item>
+
+</style>
+
+
+
+</resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".SystemType">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+    <include
+        layout="@layout/custom_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_system"
+            android:id="@+id/activity_chooser_view_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/auto_button"
+            android:textSize="20sp"
+            android:paddingBottom="26dp"
+            app:layout_constraintVertical_chainStyle="packed"
+
+            />
+
+        <Button
+            android:id="@+id/auto_button"
+            android:text="@string/automatic"
+            style="@style/buttonStyle1"
+            android:textColor="@color/redColor"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_chooser_view_content"
+            app:layout_constraintBottom_toTopOf="@id/man_button"
+            android:layout_marginTop="16dp"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".7"
+
+            />
+
+
+        <Button
+            android:id="@+id/man_button"
+            android:text="@string/manual"
+            style="@style/buttonStyle1"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".7"
+            android:textColor="@color/redColor"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/auto_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="16dp"
+            android:onClick="openControl"
+            />
+
+
+    <ImageView
+        android:id="@+id/check"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tick"
+        app:layout_constraintTop_toBottomOf="@id/man_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/auto_text_view_on"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/auto_text_view_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_system_massege_on"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/check"
+        app:layout_constraintTop_toBottomOf="@id/man_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/xicon"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancel"
+        app:layout_constraintTop_toBottomOf="@id/man_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/auto_text_view_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/auto_text_view_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto_system_massege_off"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/xicon"
+        app:layout_constraintTop_toBottomOf="@id/man_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/error_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_message"
+        android:textColor="@color/redColor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/man_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        android:visibility="gone"
+        />
+
+    <include
+        layout="@layout/home_button"/>
+
+    <include
+        layout="@layout/exit_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

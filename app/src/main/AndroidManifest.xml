@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.smartheater">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".TimeScheduling"
+            android:label="@string/repeat_scheduled"
+            android:parentActivityName=".Control" />
+        <activity
+            android:name=".Control"
+            android:label="@string/control"
+            android:parentActivityName=".SystemType" />
+        <activity
+            android:name=".SystemType"
+            android:label="@string/system_type"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Reset"
+            android:label="@string/password_recovery"
+            android:parentActivityName=".SignIn" />
+        <activity
+            android:name=".SignUp"
+            android:label="@string/Sign_Up"
+            android:parentActivityName=".SignIn" />
+        <activity
+            android:name=".SignIn"
+            android:label="@string/sign_in"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".AboutUs"
+            android:label="@string/about_button"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HowToUse"
+            android:label="@string/how_button"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".data.HeaterProvider"
+            android:authorities="com.example.smartheater"
+            android:exported="false" />
+    </application>
+
+</manifest>

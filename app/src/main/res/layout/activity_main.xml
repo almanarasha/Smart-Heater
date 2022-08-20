@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <include
+        layout="@layout/custom_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="@color/redColor"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/logo_image_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+
+        />
+
+    <ImageView
+        android:id="@+id/logo_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/about_us_pragraph"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/start_button"
+        app:layout_constraintHeight_percent=".4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view" />
+
+    <Button
+        android:id="@+id/start_button"
+        style="@style/buttonStyle1"
+        android:text="@string/start_button"
+        android:onClick="openSignIn"
+        android:textColor="@color/redColor"
+        app:layout_constraintBottom_toTopOf="@id/How_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_image_view"
+
+        />
+
+    <Button
+        android:id="@+id/How_button"
+        style="@style/buttonStyle2"
+        android:onClick="openHowToUse"
+        android:text="@string/how_button"
+        android:textColor="@color/darkGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/about_button"
+        app:layout_constraintTop_toBottomOf="@id/start_button"
+
+        />
+
+    <Button
+        android:id="@+id/about_button"
+        style="@style/buttonStyle2"
+        android:onClick="openAboutUs"
+        android:text="@string/about_button"
+        android:textColor="@color/darkGray"
+        app:layout_constraintLeft_toRightOf="@id/How_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

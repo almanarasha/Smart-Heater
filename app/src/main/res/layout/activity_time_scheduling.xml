@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context=".TimeScheduling"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        layout="@layout/custom_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/repeat_text_view"
+        android:text="@string/Schedule"
+        android:textColor="@color/redColor"
+        android:textSize="26sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/hours_numpicker"
+        android:layout_marginTop="70dp"
+
+
+        />
+    <NumberPicker
+        android:id="@+id/hours_numpicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/hours_text_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeat_text_view"
+        app:layout_constraintBottom_toTopOf="@id/save_button"
+        />
+    <TextView
+        android:id="@+id/hours_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hours"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/hours_numpicker"
+        app:layout_constraintRight_toLeftOf="@id/min_numpicker"
+        app:layout_constraintTop_toBottomOf="@id/repeat_text_view"
+        app:layout_constraintBottom_toTopOf="@id/save_button"/>
+    <NumberPicker
+        android:id="@+id/min_numpicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/hours_text_view"
+        app:layout_constraintRight_toLeftOf="@id/min_text_view"
+        app:layout_constraintTop_toBottomOf="@id/repeat_text_view"
+        app:layout_constraintBottom_toTopOf="@id/save_button"
+        />
+    <TextView
+        android:id="@+id/min_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/min_numpicker"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/repeat_text_view"
+        app:layout_constraintBottom_toTopOf="@id/save_button"
+        />
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        style="@style/buttonStyle1"
+        android:textColor="@color/redColor"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/min_numpicker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="saveTime"
+        />
+    <include
+        layout="@layout/home_button"/>
+    <include
+        layout="@layout/exit_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
